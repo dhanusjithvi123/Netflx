@@ -1,0 +1,18 @@
+<div class="container-fluid p-0 m-0 bg-dark">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{latestMovie?.backdrop_path}}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+  
+    <app-section [movie]="trendingMovies" [title]="'Trending'" [bg]="false"></app-section>
+    <app-section [movie]="popularMovies" [title]="'Popular Movies'" [bg]="true"></app-section>
+    <app-section [movie]="nowPlayingMovies" [title]="'Now Playing'" [bg]="false"></app-section>
+    <app-section [movie]="topRatedMovies" [title]="'Top Rated'" [bg]="true"></app-section>
+    <app-section [movie]="upComingMovies" [title]="'Up Coming'" [bg]="false"></app-section>
+    <app-section [movie]="originals" [title]="'Originals'" [bg]="true"></app-section>
+  
+  </div>
+  

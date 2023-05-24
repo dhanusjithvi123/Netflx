@@ -1,0 +1,14 @@
+
+<div class="row mt-3 pt-2 px-2" [ngStyle]="{'background-color': isTrue ? '#424242' : '' }">
+    <h6 class="text-white">{{titleProps}}</h6>
+    <div class="col-md-2 mt-3" *ngFor="let movie of movieProps?.results; let i = index">
+     <div class="card bg-dark" *ngIf="i<6 ">
+       <img src="{{movie.backdrop_path}}" class="card-img-top" alt="">
+       <div class="card-body" [ngStyle]="{'background-color': isTrue ? '': '#424242'  }">
+         <h5 class="card-title text-white">{{movie.title}}</h5>
+         <p class="text-white"><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
+         <p class="text-white">Language : <span class="p-1" style="background-color: #424242;"><b>{{movie.original_language}}</b></span></p>
+       </div>
+     </div>
+    </div>
+   </div>
